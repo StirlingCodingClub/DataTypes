@@ -12,7 +12,6 @@
 *.Rhistory
 
 # Markdown generated files
-*.md
 *.tex
 *.log
 *.pdf
