@@ -9,7 +9,7 @@ output: github_document
 According to a recent survey by RStudio the biggest barriers to learning R include interpreting error messages and understanding data types.
 It seems that most errors are caused by R looking for something that is not there [ref], and often times this is because the wrong type of object has been provided.
 
-```{r out.width="75%"}
+```{r out.width="75%", echo=FALSE}
 knitr::include_graphics('figs/r_difficulties.png')
 ```
 

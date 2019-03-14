@@ -20,7 +20,6 @@
 *.html
 
 # Plots
-*.png
 
 # Directories
 *Data/
