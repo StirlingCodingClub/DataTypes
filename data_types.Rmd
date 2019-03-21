@@ -159,6 +159,7 @@ l <- list(
 lapply(l, sum)
 
 ```
+Try c = `lm1[['coefficients']]` instead.
 
 More realistical example
 
@@ -186,6 +187,8 @@ lapply(list(df, m, a, l, v), is.vector)
 is.vector(df[1])
 
 ```
+
+We didn't create a object called df - df is an inbuilt function (ie closure)!
 
 ## Logical
 
@@ -238,8 +241,11 @@ What will happen when this is run?
 Have an answer in mind before you run it.
 ```{r}
 
-if (identical(v, w)) print('Woo hoo!')
-else print('Doh!')
+if (identical(v, w)) {
+  print('Woo hoo!')
+} else {
+  print('Doh!')
+}
 
 ```
 
@@ -253,7 +259,7 @@ z <- FALSE
 
 while(!z) {
   
-  if (x == 0.3 {
+  if (x == 0.3) {
     print('Woo hoo!')
     z <- TRUE
   }
@@ -267,8 +273,13 @@ while(!z) {
 
 }
 
+0.3 == 0.1 + 0.2
 
 ```
+Try replacing either 0.8 or 0.3 with 0.5 in the while loop.
+
+For data analysis uses this is probably most relevent if you decide to do something like subset a dataframe based on the sum of two to other column, or similar.
+
 
 Easy(ish) to diagnose using hard-coded values    
 Much more slippery when using variables
